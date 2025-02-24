@@ -1,0 +1,136 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Spacing */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Title & Description */
+.title-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.title-text {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+/* Product Image Styling */
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Padding around the image */
+}
+
+.product-img {
+    width: 100%;
+    max-width: 400px; /* Default size for larger screens */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Hover Zoom Effect (Disabled on Phones) */
+@media (min-width: 769px) {
+    .product-img:hover {
+        transform: scale(1.2);
+    }
+}
+
+/* Technical Specifications Table */
+.table-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px; /* Padding around the table */
+}
+
+.table {
+    width: 100%; /* Reduced table width */
+    max-width: 600px; /* Limit max size */
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 5px; /* Reduced padding between table data */
+    text-align: left;
+    font-size: 0.9rem; /* Slightly smaller font */
+}
+
+.table thead {
+    background-color: #343a40;
+    color: white;
+}
+
+/* About Section */
+.about-product-heading {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.about-product-text {
+    font-size: 0.9rem;
+    text-align: justify;
+    color: #333;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .container {
+        padding: 15px;
+    }
+
+    .title-heading {
+        font-size: 1.5rem;
+    }
+
+    .title-text {
+        font-size: 1rem;
+    }
+
+    .product-image-container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .product-img {
+        max-width: 250px; /* Reduce image size on small screens */
+        transform: scale(1); /* Prevent hover zoom on mobile */
+    }
+
+    .table-container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .table {
+        width: 90%; /* Slightly smaller table for better fit */
+        max-width: 400px; /* Reduce max width on mobile */
+    }
+
+    .table th, .table td {
+        padding: 3px; /* Further reduced padding for compact display */
+        font-size: 0.85rem; /* Smaller font on mobile */
+    }
+
+    .about-product-heading {
+        font-size: 1.5rem;
+    }
+
+    .about-product-text {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+}

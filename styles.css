@@ -1,0 +1,300 @@
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px;
+  padding: 10px;
+  }
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex; /* Enable flexbox */
+    justify-content: flex-end; /* Align items to the right */
+    background-color: #ffffff; /* Dark background color */
+    padding: 5px; 
+    z-index: 100;
+    border-bottom: 1px solid #ccc; /* Light gray solid line */
+}
+.navbar a {
+    color:black; /* White text color */
+    padding: 10px 20px; /* Space around each link */
+    text-decoration: none; /* Remove underline */
+    font-size: 15px; /* Text size */
+}
+.navbar a:hover {
+    background-color: #fdfafa; /* Light background on hover */
+    color: rgb(92, 51, 240); /* Text color changes on hover */
+}
+
+.display-4{
+    color: rgb(33, 33, 147);
+    font-weight: 900;
+}
+.lead{
+  font-weight: 600;
+}
+.lead2{
+  font-weight: 500;
+}
+  /* Home Section */
+  .home-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+    margin-top: 80px;
+    background-image: url("images/back.png");
+  }
+  
+  /* Carousel */
+  .carousel-item img {
+    height: 400px;
+    width: 200px;
+  }
+  .carousel{
+    height: 400px;
+    width: 350px;
+    margin-left: 50px;
+  }
+  /* About Section */
+  .about-section {
+    background: #fff;
+    padding: 30px 0;
+  
+  }
+  .about-section .container{
+    margin-top: 80px;
+    
+  }
+  .about-text{
+    font-weight: 600;
+    color: rgb(33, 33, 147);
+  }
+  .about-image  img{
+    padding-top: 40px;
+    width: 90vw;
+    height: 50vh;
+  }
+  .btn{
+    background-color:  rgb(33, 33, 147);
+
+  }
+  
+  
+  /* Products Section */
+  .products-section .container{
+    margin-top: 40px;
+
+  }
+  .products-section {
+    margin-top: 0px;
+  }
+  .pro{
+    background-image: url("images/back.png");
+
+  }
+  .products-section .card {
+    transition: transform 0.3s;
+  }
+  .card-img-top{
+    height: 40%;
+    width: 50%;
+    margin-top: 5%;
+  }
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fefcfc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    overflow: hidden; /* Hide content that overflows rounded corners */
+    height: 90%;
+  
+  
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Move card up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  .products-section .card:hover {
+    transform: scale(1.05);
+  }
+  .products-section .text{
+    font-weight: 600;
+    color: rgb(33, 33, 147);
+  }
+  .card-body{
+    text-align: center;
+
+    font-size: 13px;
+    
+  }
+  .card-body p{
+    margin-top: 3px; /* Space above each paragraph */
+    margin-bottom: 3px;
+  }
+  .card-title{
+    font-weight: 600;
+    color: rgb(33, 33, 147);
+    font-size: 17px;
+  }
+
+
+  
+  
+  /* Why Choose Us Section */
+  .why-choose-us-section {
+
+    background-image: url("images/back.png");
+
+  }
+  .why-choose-us-section .text{
+    font-weight: 600;
+    color: rgb(33, 33, 147);
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  .why-choose-us-section .container{
+    margin-top: 90px;
+  }
+  .why-choose-us-section ul {
+    list-style-type: "→"; /* Or "»", "›", etc. for different arrows */
+  }
+  .why-choose-us-section .img-fluid{
+    margin-left: 20%;
+  }
+
+  
+  /* Clients Section */
+.clients-section {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.clients-section .container {
+  margin-top: 100px;
+}
+
+.clients-section img {
+  max-width: 70%;
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.clients-section img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.clients-text {
+  font-weight: 600;
+  color: rgb(33, 33, 147);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .clients-section img {
+      max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-section img {
+      max-width: 90%;
+  }
+}
+
+  
+/* CONTACT SECTION */
+.contact {
+  display: flex;
+  flex-wrap: wrap; /* Allows content to stack on smaller screens */
+  padding: 20px;
+  gap: 20px;
+  background-color: rgb(231, 230, 237);
+  justify-content: space-between;
+}
+
+.contact-details, .quick-links, .site-links {
+  flex: 1; /* Equal width sections */
+  min-width: 250px; /* Prevents sections from getting too narrow */
+}
+
+.headings {
+  color: rgb(39, 39, 139);
+  font-weight: 600;
+}
+
+.subhead {
+  color: rgb(39, 39, 139);
+  font-weight: 800;
+}
+
+.quick-links ul, .site-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links-list, .site-links-list {
+  color: black;
+  text-decoration: none;
+}
+
+/* FOOTER SECTION */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Aligns text to left, social links to right */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px; /* Space between social media icons */
+}
+
+.social-links a img {
+  width: 30px;
+  height: 30px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .head-text {
+      text-align: center;
+      font-size: 14px;
+  }
+
+  .contact {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .social-links {
+      justify-content: center;
+      margin-top: 10px;
+  }
+}

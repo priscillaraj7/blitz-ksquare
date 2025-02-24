@@ -1,0 +1,400 @@
+/* about.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    padding: 10px;
+
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex; /* Enable flexbox */
+    justify-content: flex-end; /* Align items to the right */
+    background-color: #ffffff; /* Dark background color */
+    padding: 5px; 
+    z-index: 100;
+    border-bottom: 1px solid #ccc; /* Light gray solid line */
+}
+.navbar a {
+    color:black; /* White text color */
+    padding: 10px 20px; /* Space around each link */
+    text-decoration: none; /* Remove underline */
+    font-size: 15px; /* Text size */
+}
+.navbar a:hover {
+    background-color: #fdfafa; /* Light background on hover */
+    color: rgb(92, 51, 240); /* Text color changes on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section 1 Styles */
+#section1 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+#about-us {
+    margin-top: 100px;
+    font-size: 2.5em;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    color: rgb(39, 39, 139);
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#company-name {
+    font-size: 2em;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Section Styling */
+#section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures proper alignment on small screens */
+    gap: 40px;
+    padding: 60px 0;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fallDown 1s ease-out forwards;
+}
+
+/* Image Styling - Fully Responsive */
+#section2 img {
+    width: 100%;
+    max-width: 600px; /* Image will scale up to 500px but not exceed it */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1s ease-out forwards 0.5s;
+}
+
+/* Text Content Styling */
+.text-content {
+    padding-top: 20px;
+    flex: 1;
+    max-width: 600px;
+    text-align: justify;
+    padding: 30px;
+    transform: translateY(-30px);
+}
+
+/* Paragraph Styling with Different Delays */
+.paragraph {
+    font-size: 1.0rem;
+    color: #333;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(-30px);
+    margin-bottom: 15px;
+}
+
+/* Animating Each Paragraph Separately */
+.paragraph:nth-child(1) {
+    animation: fallDown 0.8s ease-out forwards 0.5s;
+}
+.paragraph:nth-child(2) {
+    animation: fallDown 0.8s ease-out forwards 1s;
+}
+.paragraph:nth-child(3) {
+    animation: fallDown 0.8s ease-out forwards 1.5s;
+}
+
+/* Falling Down Animation */
+@keyframes fallDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image Zoom Animation */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #section2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    #section2 img {
+        width: 100%;
+        max-width: 350px; /* Smaller max-width for mobile */
+    }
+
+    .text-content {
+        padding: 25px;
+    }
+
+    .paragraph {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    /* Adjusting Delay for Smaller Screens */
+    .paragraph:nth-child(1) {
+        animation-delay: 0.4s;
+    }
+    .paragraph:nth-child(2) {
+        animation-delay: 0.8s;
+    }
+    .paragraph:nth-child(3) {
+        animation-delay: 1.2s;
+    }
+}
+
+/* Ensure the section has proper padding */
+#section3 {
+    padding: 40px 0;
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: #ffffff;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card images */
+.card img {
+    max-height: 100px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+/* Card heading */
+.card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Card text */
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #section3 {
+        padding: 20px 10px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card img {
+        max-height: 80px;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* contact*/
+/* GENERAL STYLES */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer sticks to bottom */
+}
+
+/* HEADER SECTION */
+header {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Aligns logo to left, title to right */
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.header-left img {
+    max-height: 80px; /* Adjust logo size */
+    width: auto;
+}
+
+.head-text {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* NAVIGATION BAR */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Distributes navigation items evenly */
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CONTACT SECTION */
+.contact {
+    display: flex;
+    flex-wrap: wrap; /* Allows content to stack on smaller screens */
+    padding: 20px;
+    gap: 20px;
+    background-color: rgb(231, 230, 237);
+    justify-content: space-between;
+}
+
+.contact-details, .quick-links, .site-links {
+    flex: 1; /* Equal width sections */
+    min-width: 250px; /* Prevents sections from getting too narrow */
+}
+
+.headings {
+    color: rgb(39, 39, 139);
+    font-weight: 600;
+}
+
+.subhead {
+    color: rgb(39, 39, 139);
+    font-weight: 800;
+}
+
+.quick-links ul, .site-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links-list, .site-links-list {
+    color: black;
+    text-decoration: none;
+}
+
+/* FOOTER SECTION */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Aligns text to left, social links to right */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px; /* Space between social media icons */
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .head-text {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
